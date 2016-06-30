@@ -4,7 +4,7 @@ This module prints a right aligned pyramid of hashes to a specified height.
 """
 
 
-def isInt(value):
+def is_int(value):
 	"""
 	Checks if a given value is an integer or not
 
@@ -24,7 +24,7 @@ def check_height(height):
 	:param height: The height value provided by the user
 	:returns: the height value as an integer or -1
 	"""
-	if isInt(height) and int(height) > 0 and int(height) <= 23:
+	if is_int(height) and int(height) > 0 and int(height) <= 23:
 		return int(height)
 	else:
 		return -1
