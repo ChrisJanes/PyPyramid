@@ -38,9 +38,9 @@ def build_line(line, height):
     :param height: the overall height of the pyramid
     :return: returns a string constructed of a number of spaces and hash symbols
     """
-    hashCount = 2 + (line - 1)
-    spaces = height - hashCount + 1
-    output = "".ljust(spaces) + "".rjust(hashCount, "#")
+    hash_count = 2 + (line - 1)
+    spaces = height - hash_count + 1
+    output = "".ljust(spaces) + "".rjust(hash_count, "#")
     return output
 
 def main():
