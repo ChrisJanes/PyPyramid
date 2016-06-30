@@ -14,12 +14,13 @@ def is_int(value):
     try:
         int(value)
         return True
-    except:
+    except ValueError:
         return False
 
 def check_height(height):
     """
-    Validates the height of the pyramid requested by the user, performs bounds checking between 1 & 23
+    Validates the height of the pyramid requested by the user.
+    Performs bounds checking between 1 & 23
 
     :param height: The height value provided by the user
     :returns: the height value as an integer or -1
@@ -43,18 +44,22 @@ def build_line(line, height):
     return output
 
 def main():
+    """
+    Requests input from user until valid input is given.
+    With valid input, prints pyramid of given size to console.
+    """
     valid_input = False
 
-    while valid_input == False:
+    while valid_input is False:
         print "Enter the height of the pyramid: "
         in_height = raw_input()
         height = check_height(in_height)
-        if height > -1: 
+        if height > -1:
             valid_input = True
     print height
 
-    for x in xrange(1,height+1):
-        print build_line(x, height)
+    for line in xrange(1, height+1):
+        print build_line(line, height)
 
 if __name__ == "__main__":
     main()
